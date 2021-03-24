@@ -19,8 +19,8 @@ namespace Hotfix_KB5000802_Remover
                 {
                     Console.WriteLine("Found it! Initializing removal procedure...");
                     string strCmdUninstall;
-                    strCmdUninstall = "/C wusa.exe /uninstall /kb:5000802";
-                    System.Diagnostics.Process.Start("CMD.exe", strCmdUninstall);
+                    strCmdUninstall = @"C:\Windows\System32\wusa.exe /uninstall /kb:5000802";
+                    System.Diagnostics.Process.Start(@"cmd", @"/c " + strCmdUninstall);
                 } 
             }
             Console.WriteLine("---------------------------------------------");
